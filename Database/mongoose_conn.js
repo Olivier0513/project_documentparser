@@ -1,9 +1,12 @@
 //Import the mongoose module
 var mongoose = require('mongoose');
 
+// Load environment variables
+require('dotenv').config();
+
 function connect() {
 //Set up default mongoose connection
-	var mongoDB = 'mongodb+srv://Olivier:123456fish@cluster0-rfw8l.mongodb.net/test?retryWrites=true&w=majority';
+	var mongoDB = process.env.MONGODB_URI;
 	
 	mongoose.connect(mongoDB);
 	//Get the default connection
