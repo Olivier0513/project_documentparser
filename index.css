@@ -1,0 +1,242 @@
+.dbFrame {
+	width: 90%;
+	margin: 3% 3%;
+	border: 2.5px solid rgb(182,182,182);
+	border-radius: 10px;
+	height: auto;
+	opacity: 1;
+	padding: 1em;
+}
+.pageHeader {
+	width: 100%;
+    height: 10em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageHeaderTitle {
+	color: rgb(25, 52, 123);
+	font-size: 25px;
+	font-weight: bold;
+	cursor: default;
+	user-select: none;
+}
+#selectType {
+	transition: opacity ease-in-out .5s;
+}
+.typeBtnSection {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.typeBtn {
+	width: 15%;
+    min-width: 12em;
+    max-width: 15em;
+    height: 22em;
+    background-color: white;
+    margin: 1em 0.75em;
+    border: 1px solid rgb(182,182,182);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    transition: border ease-in-out .5s, box-shadow ease-in-out .25s;
+    outline: none;
+}
+.typeBtn>img {
+	width: 5em;
+    height: 5em;
+    transition: all ease-in-out .5s;
+    user-select: none;
+}
+.typeBtn>div{
+	margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgb(25, 52, 123);
+    user-select: none;
+}
+#selectInputFile {
+	transition: opacity ease-in-out .5s;
+}
+.nodisplay {
+	display: none;
+}
+.pageHeader2 {
+	width: 100%;
+    height: 5em;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectFileFrame {
+	width: 70%;
+    min-width: 12em;
+    max-width: 30em;
+    max-height: 15em;
+    background-color: white;
+    margin: 1em 0.75em;
+    border: 0.25em solid rgb(25, 52, 123);
+    border-radius: .25rem;
+    overflow: scroll;
+}
+.parseSection {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.startParseBtn {
+	width: 70%;
+    min-width: 12em;
+    max-width: 20em;
+    height: 5em;
+    background-color: white;
+    margin: 1em 0.75em;
+    border: 1px solid rgb(182,182,182);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    transition: border ease-in-out .5s, box-shadow ease-in-out .25s;
+    outline: none;
+}
+.startParseBtn>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgb(25, 52, 123);
+    user-select: none;
+}
+.viewFile {
+	font-size: 1em;
+	color: rgb(25, 52, 123);
+	margin: 0.5em;
+	user-select: none;
+}
+.viewFileContent {
+	font-size: 1em;
+	color: rgba(0, 0, 0, 0.7);
+	user-select: none;
+}
+#page1 {
+	transition: opacity ease-in-out .5s;
+	position: relative;
+}
+#page2 {
+	transition: opacity ease-in-out .5s;
+	position: relative;
+}
+#showResultPage {
+	transition: opacity ease-in-out .5s;
+}
+
+#button1 {
+	width: 100%;
+	display: inline-block;
+	text-align: right;
+}
+#button2 {
+	width: 100%;
+	display: inline-block;
+	text-align: right;
+}
+#data {
+	height:400px;
+	overflow: scroll;
+	line-height: 22px
+}
+#data2 {
+	height:400px;
+	overflow: scroll;
+	line-height: 22px
+}
+#create {cursor:pointer; }
+
+#appNav {
+	display:inline-block;
+	/*position: fixed;*/
+	background-color: rgb(152, 191, 206);
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	padding: 10px;
+}
+
+#header {
+	color: white;
+	font-weight: 700;
+	font-size: 25px;
+	cursor: default;
+	user-select: none;
+}
+
+#loadingCanvas {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	opacity: 0.7;
+	z-index:90;
+}
+
+body {
+	margin: 0;
+	background-color: rgb(240, 240, 240);
+}
+#loadingcircle {
+	height: 13rem;
+	width: 13rem;
+	position: absolute;
+	top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    z-index:100;
+}
+#loading {
+	position:fixed;
+	top: 40%;
+	border: 5px solid rgb(152, 191, 206);
+	border-right: 5px solid #fff;
+	border-bottom: 5px solid #fff;
+	height: 13rem;
+	width: 13rem;
+	border-radius: 50%;
+	animation: loading 1s infinite linear;
+	
+}
+
+@keyframes loading {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#word {
+	position:fixed;
+	top: 40%;
+	font-size: 32px;
+	height: 13rem;
+	width: 13rem;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuContent>select {
+	border: 1px solid rgb(255,255,255);
+	width: 100%;
+    text-align: center;
+}

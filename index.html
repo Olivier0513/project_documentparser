@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css" />
+    <meta charset="UTF-8">
+    <title>Document Parser</title>
+</head>
+<body>
+	<div id="loadingCanvas" class="nodisplay"></div>
+	<div id="loadingcircle" class="nodisplay">
+		<div id="loading"></div>
+		<div id="word">資料處理中</div>
+	</div>
+
+	<nav id="appNav">
+		<div id="appColor">
+			<span id="header">Document Parser</span>
+		</div>
+	</nav>
+	<div id="mainpage">
+
+		<div id="selectType">
+			<div class="pageHeader">
+				<div class="pageHeaderTitle">選擇Parser格式</div>
+			</div>
+			<div class="typeBtnSection">
+				<button class="typeBtn" id="pythonBtn">
+					<img src="./img/python.png">
+					<div>Python</div>
+				</button>
+				<button class="typeBtn" id="jsBtn">
+					<img src="./img/js.png">
+					<div>JavaScript</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="selectInputFile" class="nodisplay">
+			<div class="pageHeader">
+				<div class="pageHeaderTitle">選擇轉換形式</div>
+			</div>
+			<div class="typeBtnSection">
+				<button class="typeBtn" id="fileBtn">
+					<img src="./img/file.png">
+					<div>單一js檔案</div>
+				</button>
+				<button class="typeBtn" id="folderBtn">
+					<img src="./img/folder.png">
+					<div>資料夾</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="page1" class="nodisplay">
+			<div class="pageHeader2">
+				<div class="pageHeaderTitle">選擇輸入檔案(僅限JavaScript檔案)</div>
+			</div>
+	    	<div class="parseSection">
+	    		<div class="selectFileFrame">
+	    			<div style="padding: 0.5em">
+	    				<input id="inputFile" type="file" name="upload" accept=".js">
+	    				<div class="viewFile">輸入檔案一覽</div>
+	    				<ul class="viewFileFrame">
+	    					<li class="nodisplay viewFileContent"></li>
+	    				</ul>
+	    			</div>
+	    		</div>
+	    		<button id="startParseSingle" class="startParseBtn">
+	    			<div>Parse file</div>
+	    		</button>
+	    	</div>
+
+	   		<p id="parseButton" class="nodisplay"><input type="submit" value="parse"></p>
+			<button id="showResult" class="nodisplay">Show parse result</button>
+
+			<div class="dbFrame nodisplay" id="frame1" >
+				<h2 id="parsedFileName">Parsed Schema</h2>
+				<div id="data"></div>
+				<div id="button1">
+					<input id="create" type="submit" value="寫入資料庫">
+				</div>
+			</div>
+		</div>
+
+		<div id="page2" class="nodisplay">
+			<div class="pageHeader2">
+				<div class="pageHeaderTitle">選擇輸入檔案(只轉換JavaScript檔案)</div>
+			</div>
+
+			<div class="parseSection">
+	    		<div class="selectFileFrame">
+	    			<div style="padding: 0.5em">
+	    				<input id="inputFile2" type="file" name="ctrl" webkitdirectory multiple >
+	    				<div class="viewFile">輸入檔案一覽</div>
+	    				<ul class="viewFileFrame">
+	    					<li class="nodisplay viewFileContent"></li>
+	    				</ul>
+	    			</div>
+	    		</div>
+	    		<button id="startParseMulti" class="startParseBtn">
+	    			<div>Parse file</div>
+	    		</button>
+	    	</div>
+
+	    	
+
+		  	<button id="multiParse" class="nodisplay">Parse file</button><br>
+		  	<button id="showResult2" class="nodisplay">Show parse result</button><br>
+		  	<button id="inputToDoc" class="nodisplay">輸入document網站</button>
+		  	<div class="dbFrame nodisplay" id = frame2>
+				<h2 id="parsedFileName2">Parsed Schema</h2>
+				<div id="data2"></div>
+				<div id="button2">
+					<button id="last"><</button>
+					<button id="next">></button>
+					<input id="create2" type="submit" value="寫入資料庫">
+				</div>
+			</div>
+
+		</div>
+
+		<div id="showResultPage" class="nodisplay">
+			<div class="pageHeader">
+				<div class="pageHeaderTitle">轉換成功！</div>
+			</div>
+
+			<div class="typeBtnSection">
+				<button class="typeBtn" id="goback">
+					<img src="./img/re.png">
+					<div>重新轉換</div>
+				</button>
+				<button class="typeBtn" id="goToDB">
+					<img src="./img/db.png">
+					<div>寫入資料庫</div>
+				</button>
+				<button class="typeBtn nodisplay" id="goToDocumentation">
+					<img src="./img/file.png">
+					<div>前往文件頁</div>
+				</button>
+			</div>
+			<!-- <button id="testbtn">test</button> -->
+		</div>
+
+	</div>
+
+<script src="./Static/manyOperation.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
+
+<!-- action="/submit" method="post" -->
